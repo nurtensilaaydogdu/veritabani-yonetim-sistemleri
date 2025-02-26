@@ -1,0 +1,50 @@
+1) geleneksel dosyalama sistemlerinin çalışma şeklini açıklayarak bildiğiniz bir programlama dili yardımıyla txt dosyadan veri okumak ve veri yazmak için bir uygulama geliştiriniz.
+Cevap) Geleneksel dosyalama sistemlerinde veriler txt dosyalarına yazılır ve burdan okunur fakat bunun bazı dezavantajları vardır
+. veriye hızlı erişmek zor
+.farklı dosyalarla bağlantı kurmak zor
+.düzenleme işleri daha zahmetli 
+Bu yüzden veritabanı sistemleri geliştirilmiştir. örnek bir tablo:
+1. Öğrenciler tablosu
+Öğrenci ID       Ad        Soyadı      Doğum Tarihi
+10              ömer      çelik        2000-05-12
+11              ali       kaya         2003-02-14
+12              can       yılmaz       2005-04-06
+.öğrenci ID: birincil anahtar-> her öğrenciye özel numara
+.Ad-Soyadı: öğrenci ismi
+.Doğum Tarihi: öğrencinin doğum tarihi
+2. Dersler tablosu
+Ders ID       Ders adı         Kredi
+500           matematik        5
+501           kimya            4
+502           fizik            3
+Ders ID: birincil anahtar
+Ders adı. dersin adı
+Kredi: Dersin kredi değeri
+3. Notlar tablosu
+Not ID        Öğrenci ID       Ders ID        Not
+1             10               500            90
+2             11               501            85
+3             12               502            95
+Açıklamalar:
+. Not ID: Birincil anahtar
+Öğrenci ID: Yabancı anahtar (öğrenciler tablosuna bağlı)
+Ders Id: Yabancı anahtar (dersler tablosuna bağlı)
+Not: öğrencinin aldığı not
+Sonuç olarak geleneksel dosyalama sisteminde txt dosyalarına satır satır yazılırdı.Ama veritabanı kullanarak 
+tablolar oluşturarak verileri düzenli saklamak daha kolay.
+2) Geleneksel dosyalama sistemleriyle veritabanı yönetim sistemleriyle benzerlik ve farklılıklarını açıklayın
+Cevap)Benzerlikler:
+.Veri depolama: Her iki sistem de verileri saklamak amacıyla kullanılır.
+Farklılıklar:
+1. Veri yapısı ve organizyanu:
+. Geleneksel dosyalama sistemleri: Veriler genellikle düz dosyalar halinde saklanır.
+.Veritabanı yönetim sistemleri: Veriler ilişkisel tablolar gibi yapılandırılmış formlarda saklanır.
+2.Veri erişim ve manipülasyonu:
+. Geleneksel dosyalama sistemleri: Veriye erişim ve güncelleme işlemleri genellikle programlama dilleri
+aracılığıyla manuel olarak yapılır, bu da zaman alıcı ve hata yapmaya müsaittir.
+. VTYS: SQL gibi sorgu dilleri kullanılarak veriyi en hızlı ve etkili bir şekilde erişim ve manipülasyon sağlar.
+3. Veri bütünlüğü ve güvenliği:
+. Geleneksel dosyalama sistemleri: Veri bütünlüğü ve güvenliği manuel olarak sağlanır, bu da hatalara 
+ve güvenlik açıklarına neden olabilir.
+. VTYS: Veri bütünlüğü ve güvenliği için yerleşik mekanizmalara sahiptir, bu da verilerin tutarlı ve 
+güvenli kalmasını sağlar
