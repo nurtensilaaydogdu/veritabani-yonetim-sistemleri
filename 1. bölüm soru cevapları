@@ -46,5 +46,35 @@ aracılığıyla manuel olarak yapılır, bu da zaman alıcı ve hata yapmaya m�
 3. Veri bütünlüğü ve güvenliği:
 . Geleneksel dosyalama sistemleri: Veri bütünlüğü ve güvenliği manuel olarak sağlanır, bu da hatalara 
 ve güvenlik açıklarına neden olabilir.
+3)VTYS'nin geleneksel sisteme göre üstün özelliklerini açıklayınız.
+Cevap)
+1. Veri tekrarı ve tutarsılığının azaltılması:
+. Geleneksel dosyalama sistemleri: Her uygulama kendi veri dosyalarını oluşturduğundan, aynı veriler birden fazla
+yerde saklanabilir, bu da veri tekrarına ve tutarsızlıklarına yol açabilir.
+. VTYS: veriler merkezi bir yapıda tutulur, böylece gereksiz veri tekrarları önlenir ve tutarlılık sağlanır.
+2. Veri paylaşımı ve erişimi:
+.Geleneksel dosyalma sistemleri: Veri paylaşımı sınırlıdır ve farklı kullanıcıların aynı veriye ulaşması zordur.
+.VTYS: Birden fazla kullanıcı, yetkileri dahilinde cerileri eşzamanlı olarak erişebilir ve verileri paylaşabilir.
+3.Veri Güvenliği ve gizliliği:
+.Geleneksel dosyalma sistemleri: Veri güvenliği ve gizliliği manuel olarak sağlanır ve güvenlik açıklarına neden olabilir.
+.VTYS: Kullanıcı yetkilendirmeleri ve erişim kontrolleri sayesinde veri güvenliği ve gizliliği etkin bir şekilde yönetilir.
 . VTYS: Veri bütünlüğü ve güvenliği için yerleşik mekanizmalara sahiptir, bu da verilerin tutarlı ve 
 güvenli kalmasını sağlar
+4)Veritabanının görevini açıklayarak kullanıldığı alalara örnekler veriniz
+Cevap) Veritabanın Görevi:
+Veritabanları, büyük miktar veriyi organize bir şekilde depolayarak, bu verilere hızlıve güvenli erişim sağlar.
+Ayrıca, verilerin düzenlenmesi, güncellenmesi ve yönetilmesini kolaylaştırır. veritabanı yazılımları dosya ve kayıt oluşturmayı,
+veri girişini, veri düzenlemeyi, güncellemeyi ve raporlamayı kolay hale getirir.
+Kullandığı alanlar:
+Veritabanları, birçok sektörde ve uygulama alanında kullanılmaktadır. bazı örnekleri:
+. internet siteleri: üyelik sistemleri, kullanıcı bilgilerini saklamak ve yönetmek için veritabanları kullanılır.
+. Akademik kurumlar: üniversiteler ve araştırma merkezleri, tez ve makale yönetim sistemlerinde veritabanlarından faydalanır.
+.Kurumsal şirketler: müşteri bilgileri, ürün envanteri ve satış verileri gibi büyük boyutlu kurumsal verilerin tek bir çatı altında
+işlenmesi ve saklanması için veritabanları kullanılır.
+5)Tablo, satır ve sütun kavramlarını açıklayınız:
+Cevap)
+Tablo: verilerin düzenli bir şekilde sunulmasını sağlayan, satır ve sütunlardan oluşan yapıdır. Tablolar, verilerin kolayca okunmasını
+ve karşılaştırılması için kullanılır.
+Satır: Tabloda yatay olarak yer alan veri dizisidir. her satır, belirli bir öğeye veya kayda ait bilgileri içerir.
+Sütun: Tablolarda dikey olarak yer alan veri dizisidir. Her sütun, belirli bir veri türünü veya özelliği temsil eder.
+
