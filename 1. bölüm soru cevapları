@@ -77,4 +77,52 @@ Tablo: verilerin düzenli bir şekilde sunulmasını sağlayan, satır ve sütun
 ve karşılaştırılması için kullanılır.
 Satır: Tabloda yatay olarak yer alan veri dizisidir. her satır, belirli bir öğeye veya kayda ait bilgileri içerir.
 Sütun: Tablolarda dikey olarak yer alan veri dizisidir. Her sütun, belirli bir veri türünü veya özelliği temsil eder.
-
+6) Birincil anahtar ve yabancı anahtar kavramlarını ve farklılıklarını açıklayınız.
+Cevap)
+Birincil anahtar:bir tabloda her satırı benzersiz şekilde tanımlayan sütun ve satır grubudur.Her tablonun yanlızca 1 birincil anahtarı vardır.
+Özellikleri:
+.Benzersizlik: her birincil anahtar değeri, tabloda tek ve benzersiz olmalıdır.
+.Boş değer(NULL) içermeme: Birincil anahtar sütunları boş değer almaz.
+Yabancı anahtar (foreign key): Bir tablodaki birincil anahtarlara referans verdiği anahtardır.Bu, tablolar arasındaki ilişkiyi kurmayı sağlar.
+Özellikleri:
+.Benzersiz olmama: Yabancı anahtar sütunları, aynı değeri birden fazla kez içerebilir.
+.Boş değer (NULL) içerebilme: Yabancı anahtar sütunları birden fazla boş değere izin verebilir.
+.Birden fazla olabilme: Bir tabloda birden fazla yabancı anahtar bulunabilir.
+Farklılıklar:
+.Birincil anahtae: Tablodaki her kaydı benzersiz şekilde tanımlamak için kullanılır.
+.Yabancı anahtar: İki tablo arasındaki ilişki kurmak için kullanılır.
+7) Veritabanı kullanıcı türleri nelerdir? 
+Cevap)
+1. Veritabnı yöneticisi (database administrator-DBA):
+.Görevleri: veritabanının tasarımı bakımı, güvenliği ve performansından sorumludur. Yedekleme, geri yükleme işlemleri ve kullanıcı yetkilendirmeleri
+gibi kritik görevleri üstlenir.
+2. Uygulama Geliştiricileri (Application Developers):
+.Görevleri: Veritabanı üzerinde çalışan uygulamaları geliştiren ve bakımını yapan kişilerdir. Veritabanı ile etkileşimli yazılımlar yazarlar.
+3. Sorgu dili kullanıcıları (Query users):
+.Görevleri: Veritabanına doğrudan sorgular yazarak veri çeken, raporlar oluşturan ve analizler yapan kullanıcılardır.
+genellikle SQL gibi sorgu dillerini kullanırlar.
+4. Son kullanıcılar (End users):
+.Görevleri: Hazorlanmış uygulamalar veya arayüzler üzerinden veritabanı ile etkileşime giren, veri girişi tapan veya raporları görüntüleyen kişilerdir.
+Teknik detaylara hakim olmaları gerekmez.
+5. Güvenlik yöneticileri (System administrator):
+.Görevleri: Veritabanının güvenliğinden sorumlu olan, erişim kontrollerini yöneten ve sızıntıları önlemek için politikalar belirleyen uzmanlardır.
+6. Sistem yöneticileri (System administrators): 
+.Görevleri: Veritabanı sunucularının donanım ve işletim sistemi seviyesindeki bakımını yapan, perdorman izleme ve sistem güncellemelerini yönten kişilerdir.
+8) Örnek bir veritabanı için kullanıcılar belirlerek yetkilendirmelerini şematik olarak gösteriniz.
+Cevap)
+1. Veritabanı yöneticisi:
+Yetkiler: Tüm veritabı üzerinde tam kontrol; tablo oluşturma, silme, güncelleme, kullanıcı ekleme ve yetki atama gibi işlemleri gerçekleştirebilir.
+2. Uygulama geliştiricisi:
+yetkiler: Veritabanı şemasında değişiklik yapma, yeni tablolar ve prosedürler oluşturma, mevcut yapıları güncelleme yetkisine sahiptir.
+3. Veri analisti: 
+Yetkiler: Tablolarsan veri okuma (SELECT) ve analiz yapma yetkisine sahiptir; ancar veri üzeründe değişiklik yapamaz.
+4. Veri giriş personeli: 
+Yetkiler: Belirli tablolara veri ekleme (INSERT) ve mevcut verileri güncelleme (UPDATE) yetkisine sahiptir; ancar veri silemez beya tablo yapısını değiştiremez.
+5. Raporlama uzmanı:
+Yetkiler: Veritabanından raporları oluşturmak için veri okuma (SELECT) yetkisine sahiptir; veri ekleme, güncelleme veya silme yetkisi yoktur.
+6.Güvenlik yöneticisi:
+Yetkiler: Kullanıcı hesaplarını yönetme, şifreleme ve erişim izinlerini düzenleme yetkisine sahiptir; beri içeriğine erişim sınırlıdır.
+7. Yedekleme operatörü:
+Yetkiler: Veritabanının yedeklenmesi ve geri yüklenmesi işlemlerini gerçekleştirme yetkisine sahiptir; üzerinde okuma veya yazma işlemleri yapamaz.
+8.Misafir kullanıcı:
+Yetkiler: Sadece belirli genel tablolarda sınırlı okkuma (SELECT) yetkisine sahiptir; veri ekleme, güncelleme veya silme yetkisi yoktur.
