@@ -18,7 +18,7 @@ Ders ID       Ders adı         Kredi
 501           kimya            4
 502           fizik            3
 Ders ID: birincil anahtar
-Ders adı. dersin adı
+Ders adı: dersin adı
 Kredi: Dersin kredi değeri
 3. Notlar tablosu
 Not ID        Öğrenci ID       Ders ID        Not
