@@ -150,13 +150,14 @@ Cevap)
  .Alanlar: BölümID (birincil anahtar), bölümAdı, Fakülte
 .Dersler: verilen dersleri içerir.
  .Alanlar: DersID (birincil anahtar), DersAdı, Kredi, BölümID (yabancı anahtar)
-.Öğretmenler: Ders veren öğretim üyelerini içerir.
- .Alanlar: ÖğretmenID (Birincil Anahtar), İsim, Soyisim, Ünvan, BölümID (Yabancı Anahtar)
-.ÖğrenciDers: Öğrencilerin aldıkları dersleri ve notlarını tutar.
- .Alanlar: ÖğrenciID (Birincil Anahtar), DersID (Birincil Anahtar), Not
-2. Tablolar Arasındaki İlişkiler:
-.Öğrenciler ve Bölümler: Her öğrenci bir bölüme aittir. Bu, "Bire-Çok" ilişkisidir.
-.Dersler ve Bölümler: Her ders bir bölüm tarafından verilir. Bu da "Bire-Çok" ilişkisidir.
-.Öğretmenler ve Bölümler: Her öğretmen bir bölüme bağlıdır. Bu, "Bire-Çok" ilişkisidir.
-.Öğrenciler ve Dersler: Öğrenciler birden fazla ders alabilir ve her ders birden fazla öğrenci tarafından alınabilir. Bu, "Çoka-Çok" ilişkisidir ve ÖğrenciDers adlı ara tablo ile yönetilir.
-.Öğretmenler ve Dersler: Her ders bir öğretmen tarafından verilir. Bu, "Bire-Çok" ilişkisidir.
+.Öğretmenlr: Ders verem öğretim üuelerini içerir.
+ .Alanlar: ÖğretmenID (birincil anahtar), İsim, Soyisim, Unvan, BölümID (yabancı anahtar)
+ÖğrenciDers: Öğrencilerin aldıkları dersleri ve notları tutar.
+ .Alanlar: ÖğrenciID (birincil anahtar), DersID (Birincil anahtar), Not
+2. tablolar arasındaki İlişkiler:
+.Öğrenci ve bölümler: Her öğrenci bir bölüme aittir. Bu, "Bire-Çok" ilişkisidir.
+.Dersler ve bölümler: Her ders bir bölüm tarafından verilir. Bu da "Bire-çok" ilişkisidir.
+.Öğretmenler ve bölümler: Her öğretmen bir bölüme bağlıdır. Bu "Bire-Çoké ilişkisidir
+.Öğrenciler ve dersler: Öğrenciler birden fazla ders alabilir ve her ders birden fazla öğrenci tarafından alınabilir. Bu "Çoka-Çok" ilişkisidir.
+.Öğretmenler ve dersler: Her ders bir öğretmen tarafından verilir. Bu "Bire-Çok" ilişkisidir.
+
