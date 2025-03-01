@@ -126,3 +126,37 @@ Yetkiler: Kullanıcı hesaplarını yönetme, şifreleme ve erişim izinlerini d
 Yetkiler: Veritabanının yedeklenmesi ve geri yüklenmesi işlemlerini gerçekleştirme yetkisine sahiptir; üzerinde okuma veya yazma işlemleri yapamaz.
 8.Misafir kullanıcı:
 Yetkiler: Sadece belirli genel tablolarda sınırlı okkuma (SELECT) yetkisine sahiptir; veri ekleme, güncelleme veya silme yetkisi yoktur.
+9)Veritabanı ile VTYS'nin farkını açıklayınız.
+Cevap)
+Veritabanı: Belirli bir amaç doğrultusunda organize edilmiş, yapılandırılmış veri topluluğudur. Bu veriler, tablolar kayıtlar ve alanlar gibi çeşitli bileşenlerden
+oluşur ve genellikle birbiriyle ilişkili bilgileri içerir. Örneğin bir müşteri veritabanı, müşteri adları, adresleri ve sipariş geçmişleri gibi bilgileri saklar.
+VTYS: veritabanlarını oluşturmak, yönetmek ve kontrol etmek için kullanılan yazılım sistemidir. Bu sistem kullanıcıların veri tabanına veri eklemesine, güncellemesine, silmesine 
+ve sorgulamasına olanak tanır. Ayrıca, veri güvenliği bütünlüğü ve erişim kontrolü gibi kritik işlevleri de sağlar. örneğin, MySQL, PostgreSQL ve Oracle databese gibi 
+yazılımlar birer VTYS'dir.
+Özetle:
+.Veritabanı verilerin depolandığı yer veya yapıdır.
+.VTYS ise bu verilerin yönetimini ve erişimini sağlayan yazılım sistemidir.
+Yani, veritabanı verilerin kendisini ifade ederken, VTYS bu verilerle etkileşim kurmamızı sağlayan araçtır.
+10) ilişkisel veri modelini açıklayınız.
+Cevap) İlişkisel veri modeli, verileri iki boyutlu tablolar şeklinde düzenleyen ve bu tablolar arasındaki ilişkileri tanımlayan bir veri modelidir.
+Her tablo, belirli bir varlık türünü (örneğin, müşteri veya ürün) temsil eder ve satırlar ile sütunlardan oluşur. Satırlar varlık örneklrini;
+sütunlar ise bu varlıkların özelliklerini temsil eder.
+11) bir öğrenci bilgi sistemi için kullanılacak veritabanı, tablolar ve tablolar arasındali ilişkileri belirleyiniz.
+Cevap) 
+1. tablolar:
+. Öğrenciler: Öğrenci bilgilerini saklae.
+ . Alanlar: DersID (birincil anahtar), BölümAdı, Fakülte
+.Bölümler: Üniversitedeki bölümleri temsil eder.
+ .Alanlar: BölümID (birincil anahtar), bölümAdı, Fakülte
+.Dersler: verilen dersleri içerir.
+ .Alanlar: DersID (birincil anahtar), DersAdı, Kredi, BölümID (yabancı anahtar)
+.Öğretmenler: Ders veren öğretim üyelerini içerir.
+ .Alanlar: ÖğretmenID (Birincil Anahtar), İsim, Soyisim, Ünvan, BölümID (Yabancı Anahtar)
+.ÖğrenciDers: Öğrencilerin aldıkları dersleri ve notlarını tutar.
+ .Alanlar: ÖğrenciID (Birincil Anahtar), DersID (Birincil Anahtar), Not
+2. Tablolar Arasındaki İlişkiler:
+.Öğrenciler ve Bölümler: Her öğrenci bir bölüme aittir. Bu, "Bire-Çok" ilişkisidir.
+.Dersler ve Bölümler: Her ders bir bölüm tarafından verilir. Bu da "Bire-Çok" ilişkisidir.
+.Öğretmenler ve Bölümler: Her öğretmen bir bölüme bağlıdır. Bu, "Bire-Çok" ilişkisidir.
+.Öğrenciler ve Dersler: Öğrenciler birden fazla ders alabilir ve her ders birden fazla öğrenci tarafından alınabilir. Bu, "Çoka-Çok" ilişkisidir ve ÖğrenciDers adlı ara tablo ile yönetilir.
+.Öğretmenler ve Dersler: Her ders bir öğretmen tarafından verilir. Bu, "Bire-Çok" ilişkisidir.
