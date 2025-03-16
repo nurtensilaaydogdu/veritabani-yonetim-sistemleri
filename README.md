@@ -1,0 +1,91 @@
+create database Library; -- bir kez database oluşturulurken çalıştırılır.
+
+
+use Kutuphane -- bu kütüpaheyi kullanarak aşağıdaki tabloları ekleyebilirsiniz.
+
+
+create table Adresler(
+adresNo int not null identity(1,1) Primary Key,
+sehir nvarchar(100),
+cadde nvarchar(100),
+mahalle nvarchar(100),
+binaNo int,
+postaKodu int,
+ulke nvarchar(100)
+);
+
+create table uyeler(
+uyeNo int not null identity(1,1) Primary Key,
+uyeAdi nvarchar(50) not null,
+uyeSoyadi nvarchar(50) not null,
+eposta nvarchar(100),
+telefon nvarchar(100),
+cinsiyet char(2),
+adresNO int Foreign Key(adresNo) REFERENCES 
+adresler(adresNO)
+);
+
+create table kutuphane(
+kutuphaneNO int not null identity(1,1) primary key,
+kutuphaneIsmi nvarchar(100) not null,
+aciklama nvarchar(150),
+adresNo int foreign key (adresNo) references adresler(adresNo)
+);
+
+create table kitaplar(
+ISBN int not null primary key,
+sayfaSayisi int,
+kitapAdi nvarchar(100) not null,
+yayinTarihi nvarchar(100)
+);
+
+
+create table emanet(
+emanetNO int not null identity(1,1) Primary Key,
+emanetTarihi nvarchar(100),
+teslimTarihi nvarchar(100),
+uyeNo int Foreign Key (uyeNo) references uyeler(uyeNo),
+kutuphaneNo int Foreign Key (kutuphaneNo) references kutuphane (kutuphaneNo),
+ISBN int Foreign Key (ISBN) references kitaplar(ISBN)
+);
+
+
+create table kategoriler (
+    KategoriNo int not null identity(1,1) Primary Key,
+    KategoriAdi nvarchar(100) not null
+);
+
+
+create table yazarlar (
+    YazarNo int not null identity(1,1) Primary Key,
+    YazarAdi nvarchar(100) not null,
+    YazarSoyadi nvarchar(100) not null
+);
+
+
+create table kutuphane_kitaplar (
+    KutuphaneNo int not null,
+    ISBN int not null,
+    Miktar int,
+    Primary Key (KutuphaneNo, ISBN),
+    Foreign Key (KutuphaneNo) REFERENCES Kutuphane(KutuphaneNo),
+    Foreign Key (ISBN) REFERENCES Kitaplar(ISBN)
+);
+
+
+create table kitaplar_yazarlar (
+    ISBN int not null,
+    YazarNo int,
+    Primary Key (ISBN, YazarNo),
+    Foreign Key (ISBN) REFERENCES Kitaplar(ISBN),
+    Foreign Key (YazarNo) REFERENCES Yazarlar(YazarNo)
+);
+
+
+Create table kitaplar_kategoriler (
+    ISBN int not null,
+    KategoriNo int not null,
+    Primary Key (ISBN, KategoriNo),
+    Foreign Key (ISBN) REFERENCES Kitaplar(ISBN),
+    Foreign Key (KategoriNo) REFERENCES Kategoriler(KategoriNo)
+);
