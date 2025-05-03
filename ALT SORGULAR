@@ -1,4 +1,37 @@
 use galeri
+create table musteri(
+Mno int primary key identity(1,1),
+Madi nvarchar(50),
+Msoyadi nvarchar(50),
+Madres nvarchar(50),
+Mtelefon nvarchar(50)
+);
+
+create table araclar(
+Aracno int identity(1,1) primary key,
+yil int,
+model nvarchar(50),
+marka nvarchar(50),
+plaka nvarchar(50),
+fiyat float
+);
+
+create table satislar(
+satisNo int primary key not null,
+MNo int foreign key (Mno) references musteri(Mno),
+AracNo int foreign key (Aracno) references araclar(Aracno),
+SatisTarihi datetime,
+Fiyat float
+);
+
+create table alislar(
+alisNo int primary key not null,
+MNo int foreign key (Mno) references musteri(Mno),
+AracNo int foreign key (Aracno) references araclar(Aracno),
+AlisTarihi datetime,
+Fiyat float
+);
+use galeri
 insert into araclar values('2020','cla200', 'mercedes', '38SA215', '800000');
 insert into araclar values ( '2002' , 'GLA' ,'mercedes', '38G12', '65000');
 insert into araclar values ( '2020' , 'M5' ,'BMW', '47S21', '185000');
