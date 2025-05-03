@@ -119,6 +119,6 @@ select musteri.Madi,musteri.Msoyadi, araclar.marka,araclar.model
 from satislar
 join musteri on musteri.Mno=satislar.MNo
 join araclar on satislar.AracNo=araclar.Aracno
-where musteri.Madres = 'Tokat';
+where musteri.Madres = %Tokat%;
 
 
